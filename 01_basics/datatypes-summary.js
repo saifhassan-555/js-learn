@@ -30,3 +30,22 @@ const myFunction = function(){
 }
 
 console.log(typeof myFunction); //funtion object in output
+
+// Memories Types
+// Stack(Primitive) variable copy, Heap(Non-premitive) original reference
+
+let myYoutubename = "hiteshchoudharydotcom"
+
+let anothername = myYoutubename
+anothername = chaiaurcode
+// console.log(anothername)
+
+let userOne = {
+    email: "hello@gmail.com",
+    upi: "user@yb"
+}
+
+let userTwo = userOne
+userTwo.email = "hitesh@gmail.com"
+console.log(userOne.email);
+console.log(userTwo.email);
