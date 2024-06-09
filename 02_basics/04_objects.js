@@ -75,3 +75,5 @@ console.log(instructor);
     {},
     {}
 ]
+
+// use random user me and json formatter to convert Api data in code etc..
