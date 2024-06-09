@@ -50,3 +50,28 @@ console.log(Object.keys(tinderUser)); // make array of an object
 console.log(Object.values(tinderUser)); // for access values
 console.log(Object.entries(tinderUser)); // convert in array id and values separately
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+// de structuring //
+
+const course = {
+    coursename : "js in hindi",
+    price: "999",
+    courseInstructor: "hitesh"
+}
+course.courseInstructor
+
+const {courseInstructor: instructor} = course // this is de structuring we can change the keys name by de structuring
+console.log(instructor);
+
+// {
+//     name: "hitesh"
+//     coursename: "js in hindi"      // this is json for call API
+//     price: "free"
+    
+// }
+
+[
+    {},   // API in array
+    {},
+    {}
+]
