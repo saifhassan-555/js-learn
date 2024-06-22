@@ -14,7 +14,7 @@
 
 
 (  () => {
-    console.log(`DB CONNECTED TWO`); 
+    console.log(`DB CONNECTED TWO`);
 }  )();
 
 (  (name) => {
