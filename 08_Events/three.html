@@ -11,20 +11,22 @@
     <button id="stop">Stop</button>
     <script>
       
+    let IntervalId
+    document.querySelector('#start').addEventListener('click', function(){
         const sayDate = function(str){
         console.log(str, Date.now());
-       
     }
-    const IntervalId = setInterval(sayDate,1000,"Hi")
-   
-    document.querySelector('#stop').addEventListener('click', function(){
-        clearInterval(IntervalId)
-      console.log("STOPPED");
-     })
-     document.querySelector('#start').addEventListener('click', function(){
-        setInterval(IntervalId)
+      IntervalId = setInterval(sayDate,1000,"Hi")
+    
       console.log("START");
      })
+   
+    document.querySelector('#stop').addEventListener('click', function(){
+     clearInterval(IntervalId)
+     IntervalId = null
+      console.log("STOPPED");
+     })
+    
     </script>
 </body>
 </html>
