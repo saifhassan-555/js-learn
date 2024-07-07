@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Js Learn</h1>
+    <button id="stop">Stop</button>
+    <script>
+      const saysaif = function(){
+        console.log("saif");
+      }
+      const changeText = function(){
+        document.querySelector('h1').innerHTML ="Good Person"
+      }
+      const chaneMe = setTimeout(changeText,2000)
+     document.querySelector('#stop').addEventListener('click', function(){
+      clearTimeout(chaneMe)
+      console.log("STOPPED");
+     })
+    </script>
+</body>
+</html>
