@@ -28,6 +28,10 @@ myHeros.heysaif()
 
 
 //inheritance
+ const User = {
+    name: "saif",
+    email: "saif@google.com"
+ }
 
 const Teacher = {
     makeVideo: true
@@ -40,5 +44,24 @@ const Teachingsupport = {
 
 const TASupport = {
     makeAssignment: 'Js Assignment',
-    fullTime: true
+    fullTime: true, 
+    __proto__: Teachingsupport
 }
+
+Teacher.__proto__ = User
+
+//modern syntax
+Object.setPrototypeOf(Teachingsupport,Teacher)
+
+
+let anotherUsername = "javascript    "
+
+String.prototype.trueLength = function(){
+    console.log(`${this}`);
+    console.log(`True Length is: ${this.trim().length}`);
+}
+
+anotherUsername.trueLength()
+"saif".trueLength()
+"iceTea".trueLength()
+"sameer    ".trueLength()
