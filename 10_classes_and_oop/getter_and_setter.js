@@ -23,4 +23,23 @@ class User {
 
 const saif = new User("saif@123", "saif")
 console.log(saif.email);
+
+// getter and setter is used to overwrite the memory process
 // 10_classes_and_oop/getter_and_setter.js
+// ES2022 Private Properties Proposal
+//class ClassWithPrivate {
+//     #privateField;
+//     #privateFieldWithInitializer = 42;
+  
+//     #privateMethod() {
+//       // …
+//     }
+  
+//     static #privateStaticField;
+//     static #privateStaticFieldWithInitializer = 42;
+  
+//     static #privateStaticMethod() {
+//       // …
+//     }
+//   }
+  

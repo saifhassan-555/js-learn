@@ -24,4 +24,5 @@ Object.defineProperty(this, 'passeord', {
 const uni = new User("uni@555", "2345")
 console.log(uni.email);
 
+// getter and setter is used to overwrite the memory process
 // 10_classes_and_oop/properties_get_set.js
