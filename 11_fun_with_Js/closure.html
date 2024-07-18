@@ -7,7 +7,8 @@
 </head>
 <body style="background-color: #313131">
       
-
+<button id="orange">orange</button>
+<button id="green">Green</button>
 
 </body>
 <script>
@@ -22,24 +23,60 @@
 
 //Lexical Scoping
 
-function outer(){
-    let username = "saif"
-    console.log("OUTER", secret); // can not access in outer function 
-    //chota bary se mang sakta lekin bara choty se nai mang skta
-    // inner function bhi share nai kar skty apni properties aik dosry ko 
-    function inner(){
-        let secret = "my123"
-        console.log("inner", username);
-    }
-    function innerTwo(){
-        console.log("innerTwo", username);
-        console.log(secret);
-    }
-    inner()
-    innerTwo()
-}
-outer()
-console.log("TOO OUTER", username);
+// function outer(){
+//     let username = "saif"
+//     console.log("OUTER", secret); // can not access in outer function 
+//     //chota bary se mang sakta lekin bara choty se nai mang skta
+//     // inner function bhi share nai kar skty apni properties aik dosry ko 
+//     function inner(){
+//         let secret = "my123"
+//         console.log("inner", username);
+//     }
+//     function innerTwo(){
+//         console.log("innerTwo", username);
+//         console.log(secret);
+//     }
+//     inner()
+//     innerTwo()
+// }
+// outer()
+// console.log("TOO OUTER", username);
+
+
+// Closure 
+
+    // function makeFunc() {
+    //     const name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     return displayName;
+    // }
+
+    // const myFunc = makeFunc();
+    // myFunc();
+//  when we return the function  its not only return the function its return the whole scope(laxical scope) 
+//   of the function including execution context
 
 </script>
-</html>
+<script>
+// document.getElementById("orange").onclick = function(){
+//     document.body.style.backgroundColor = `orange`
+// }
+
+// document.getElementById("green").onclick = function(){
+//     document.body.style.backgroundColor = `green`
+// }
+
+function clickHandler(color){
+    document.body.style.backgroundColor = `${color}`
+
+    return function(){
+        document.body.style.backgroundColor = `${color}` // This is Closure & lexical scoping real world wxample 
+    }
+}
+
+document.getElementById('orange').onclick = clickHandler("orange") 
+document.getElementById('green').onclick = clickHandler("green")
+</script>
+</html> 
